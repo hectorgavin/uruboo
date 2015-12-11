@@ -29,12 +29,30 @@
 
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: customerInstance, field: 'notes', 'error')} ">
+	<label for="notes">
+		<g:message code="customer.notes.label" default="Notes" />
+		
+	</label>
+	<g:textArea name="notes" cols="40" rows="5" value="${customerInstance?.notes}"/>
+
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: customerInstance, field: 'assistant', 'error')} ">
 	<label for="assistant">
 		<g:message code="customer.assistant.label" default="Assistant" />
 		
 	</label>
 	<g:select id="assistant" name="assistant.id" from="${com.uruboo.Assistant.list()}" optionKey="id" value="${customerInstance?.assistant?.id}" class="many-to-one" noSelection="['null': '']"/>
+
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: customerInstance, field: 'accounts', 'error')} ">
+	<label for="accounts">
+		<g:message code="customer.accounts.label" default="Accounts" />
+		
+	</label>
+	<g:select name="accounts" from="${com.uruboo.CustomerAccount.list()}" multiple="multiple" optionKey="id" size="5" value="${customerInstance?.accounts*.id}" class="many-to-many"/>
 
 </div>
 

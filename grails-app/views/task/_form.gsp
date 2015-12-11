@@ -65,3 +65,21 @@
 
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: taskInstance, field: 'updates', 'error')} ">
+	<label for="updates">
+		<g:message code="task.updates.label" default="Updates" />
+		
+	</label>
+	
+<ul class="one-to-many">
+<g:each in="${taskInstance?.updates?}" var="u">
+    <li><g:link controller="taskUpdateLog" action="show" id="${u.id}">${u?.encodeAsHTML()}</g:link></li>
+</g:each>
+<li class="add">
+<g:link controller="taskUpdateLog" action="create" params="['task.id': taskInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'taskUpdateLog.label', default: 'TaskUpdateLog')])}</g:link>
+</li>
+</ul>
+
+
+</div>
+

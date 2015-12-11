@@ -97,6 +97,17 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${taskInstance?.updates}">
+				<li class="fieldcontain">
+					<span id="updates-label" class="property-label"><g:message code="task.updates.label" default="Updates" /></span>
+					
+						<g:each in="${taskInstance.updates}" var="u">
+						<span class="property-value" aria-labelledby="updates-label"><g:link controller="taskUpdateLog" action="show" id="${u.id}">${u?.encodeAsHTML()}</g:link></span>
+						</g:each>
+					
+				</li>
+				</g:if>
+			
 			</ol>
 			<g:form url="[resource:taskInstance, action:'delete']" method="DELETE">
 				<fieldset class="buttons">

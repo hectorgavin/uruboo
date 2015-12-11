@@ -29,6 +29,15 @@
 
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: assistantInstance, field: 'notes', 'error')} ">
+	<label for="notes">
+		<g:message code="assistant.notes.label" default="Notes" />
+		
+	</label>
+	<g:textArea name="notes" cols="40" rows="5" value="${assistantInstance?.notes}"/>
+
+</div>
+
 <div class="fieldcontain ${hasErrors(bean: assistantInstance, field: 'customers', 'error')} ">
 	<label for="customers">
 		<g:message code="assistant.customers.label" default="Customers" />

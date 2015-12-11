@@ -50,11 +50,31 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${customerInstance?.notes}">
+				<li class="fieldcontain">
+					<span id="notes-label" class="property-label"><g:message code="customer.notes.label" default="Notes" /></span>
+					
+						<span class="property-value" aria-labelledby="notes-label"><g:fieldValue bean="${customerInstance}" field="notes"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${customerInstance?.assistant}">
 				<li class="fieldcontain">
 					<span id="assistant-label" class="property-label"><g:message code="customer.assistant.label" default="Assistant" /></span>
 					
 						<span class="property-value" aria-labelledby="assistant-label"><g:link controller="assistant" action="show" id="${customerInstance?.assistant?.id}">${customerInstance?.assistant?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${customerInstance?.accounts}">
+				<li class="fieldcontain">
+					<span id="accounts-label" class="property-label"><g:message code="customer.accounts.label" default="Accounts" /></span>
+					
+						<g:each in="${customerInstance.accounts}" var="a">
+						<span class="property-value" aria-labelledby="accounts-label"><g:link controller="customerAccount" action="show" id="${a.id}">${a?.encodeAsHTML()}</g:link></span>
+						</g:each>
 					
 				</li>
 				</g:if>

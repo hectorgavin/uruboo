@@ -30,6 +30,8 @@
 					
 						<g:sortableColumn property="lastName" title="${message(code: 'assistant.lastName.label', default: 'Last Name')}" />
 					
+						<g:sortableColumn property="notes" title="${message(code: 'assistant.notes.label', default: 'Notes')}" />
+					
 						<g:sortableColumn property="dateCreated" title="${message(code: 'assistant.dateCreated.label', default: 'Date Created')}" />
 					
 						<g:sortableColumn property="lastUpdated" title="${message(code: 'assistant.lastUpdated.label', default: 'Last Updated')}" />
@@ -45,6 +47,8 @@
 						<td>${fieldValue(bean: assistantInstance, field: "firstName")}</td>
 					
 						<td>${fieldValue(bean: assistantInstance, field: "lastName")}</td>
+					
+						<td>${fieldValue(bean: assistantInstance, field: "notes")}</td>
 					
 						<td><g:formatDate date="${assistantInstance.dateCreated}" /></td>
 					

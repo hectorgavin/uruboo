@@ -50,6 +50,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${assistantInstance?.notes}">
+				<li class="fieldcontain">
+					<span id="notes-label" class="property-label"><g:message code="assistant.notes.label" default="Notes" /></span>
+					
+						<span class="property-value" aria-labelledby="notes-label"><g:fieldValue bean="${assistantInstance}" field="notes"/></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${assistantInstance?.customers}">
 				<li class="fieldcontain">
 					<span id="customers-label" class="property-label"><g:message code="assistant.customers.label" default="Customers" /></span>
