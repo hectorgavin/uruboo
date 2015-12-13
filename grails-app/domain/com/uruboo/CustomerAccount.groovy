@@ -8,6 +8,7 @@ class CustomerAccount {
     Date dateCreated
     Date lastUpdated
 
+    static belongsTo = [customer: Customer]
     static constraints = {
         host nullable: false, blank: false
         username nullable: true

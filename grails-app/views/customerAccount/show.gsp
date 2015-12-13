@@ -50,6 +50,15 @@
 				</li>
 				</g:if>
 			
+				<g:if test="${customerAccountInstance?.customer}">
+				<li class="fieldcontain">
+					<span id="customer-label" class="property-label"><g:message code="customerAccount.customer.label" default="Customer" /></span>
+					
+						<span class="property-value" aria-labelledby="customer-label"><g:link controller="customer" action="show" id="${customerAccountInstance?.customer?.id}">${customerAccountInstance?.customer?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
 				<g:if test="${customerAccountInstance?.dateCreated}">
 				<li class="fieldcontain">
 					<span id="dateCreated-label" class="property-label"><g:message code="customerAccount.dateCreated.label" default="Date Created" /></span>

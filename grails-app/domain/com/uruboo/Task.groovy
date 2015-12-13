@@ -22,4 +22,8 @@ class Task {
         finished nullable: true
         customer nullable: false
     }
+
+    String toString() {
+        return title
+    }
 }

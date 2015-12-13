@@ -30,6 +30,8 @@
 					
 						<g:sortableColumn property="password" title="${message(code: 'customerAccount.password.label', default: 'Password')}" />
 					
+						<th><g:message code="customerAccount.customer.label" default="Customer" /></th>
+					
 						<g:sortableColumn property="dateCreated" title="${message(code: 'customerAccount.dateCreated.label', default: 'Date Created')}" />
 					
 						<g:sortableColumn property="lastUpdated" title="${message(code: 'customerAccount.lastUpdated.label', default: 'Last Updated')}" />
@@ -45,6 +47,8 @@
 						<td>${fieldValue(bean: customerAccountInstance, field: "username")}</td>
 					
 						<td>${fieldValue(bean: customerAccountInstance, field: "password")}</td>
+					
+						<td>${fieldValue(bean: customerAccountInstance, field: "customer")}</td>
 					
 						<td><g:formatDate date="${customerAccountInstance.dateCreated}" /></td>
 					

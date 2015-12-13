@@ -29,3 +29,12 @@
 
 </div>
 
+<div class="fieldcontain ${hasErrors(bean: customerAccountInstance, field: 'customer', 'error')} required">
+	<label for="customer">
+		<g:message code="customerAccount.customer.label" default="Customer" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:select id="customer" name="customer.id" from="${com.uruboo.Customer.list()}" optionKey="id" required="" value="${customerAccountInstance?.customer?.id}" class="many-to-one"/>
+
+</div>
+
