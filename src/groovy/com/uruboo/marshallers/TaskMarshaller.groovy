@@ -1,6 +1,7 @@
 package com.uruboo.marshallers
 
 import com.uruboo.Task
+import com.uruboo.enums.TaskState
 import grails.converters.JSON
 
 class TaskMarshaller {
@@ -10,11 +11,14 @@ class TaskMarshaller {
                 id: task.id,
                 title: task.title,
                 description: task.description,
-                state: task.state.name(),
+                state: task.state,
                 finished: task.finished,
                 dateCreated: task.dateCreated,
                 lastUpdated: task.lastUpdated
             ]
+        }
+        JSON.registerObjectMarshaller(TaskState) { TaskState taskState ->
+            return taskState.name()
         }
     }
 }

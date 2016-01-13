@@ -18,8 +18,8 @@ class TaskUpdateLogMarshaller {
         JSON.registerObjectMarshaller(TaskStateUpdateLog) { TaskStateUpdateLog taskStateUpdateLog ->
             return [
                 id: taskStateUpdateLog.id,
-                oldState: taskStateUpdateLog.oldState.name(),
-                newState: taskStateUpdateLog.newState.name(),
+                oldState: taskStateUpdateLog.oldState,
+                newState: taskStateUpdateLog.newState,
                 dateCreated: taskStateUpdateLog.dateCreated
             ]
         }
