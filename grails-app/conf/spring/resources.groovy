@@ -1,17 +1,20 @@
 // Place your Spring DSL code here
 
-import grails.rest.render.json.JsonRenderer
-import grails.rest.render.json.JsonCollectionRenderer
+import com.uruboo.marshallers.CustomObjectMarshaller
+import com.uruboo.marshallers.UserMarshaller
+import com.uruboo.marshallers.TaskMarshaller
+import com.uruboo.marshallers.CommentMarshaller
+import com.uruboo.marshallers.CustomerAccountMarshaller
+import com.uruboo.marshallers.TaskUpdateLogMarshaller
 
 beans = {
-    List excludes = ['TaskUpdateLog', 'TaskFieldUpdateLog', 'TaskStateUpdateLog']
-
-    for (domainClass in grailsApplication.domainClasses.findAll { !excludes.contains(it.shortName) }) {
-        "${domainClass.shortName}JSONRenderer"(JsonRenderer, domainClass.clazz) {
-            excludes = ['class']
-        }
-        "${domainClass.shortName}JSONCollectionRenderer"(JsonCollectionRenderer, domainClass.clazz) {
-            excludes = ['class']
-        }
+    customObjectMarshaller(CustomObjectMarshaller) {
+        marshallers = [
+            new UserMarshaller(),
+            new TaskMarshaller(),
+            new CommentMarshaller(),
+            new CustomerAccountMarshaller(),
+            new TaskUpdateLogMarshaller()
+        ]
     }
 }

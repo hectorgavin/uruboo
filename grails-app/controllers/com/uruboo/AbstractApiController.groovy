@@ -19,11 +19,22 @@ abstract class AbstractApiController<T> extends RestfulController<T> {
     }
 
     def show() {
-        respond queryForResource(params.id), [includes: includeFields]
+        def resource = queryForResource(params.id)
+        if (params.fields && resource) {
+            resource = resource.partial(includeFields)
+        }
+        respond resource
     }
 
-    def index() {
-        respond listAllResources(params), [includes: includeFields]
+    def index(Integer max) {
+        params.max = Math.min(max ?: 10, 100)
+        def resources = listAllResources(params)
+        if (params.fields) {
+            resources = resources?.collect {
+                it.partial(includeFields)
+            }
+        }
+        respond resources
     }
 
     protected getObjectToBind() {
