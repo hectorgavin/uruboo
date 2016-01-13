@@ -11,5 +11,3 @@ cd $TOMCAT_PATH
 git add .
 git commit -am "Deploying Uruboo in Staging Server"
 git push
-
-
