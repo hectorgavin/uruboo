@@ -33,6 +33,19 @@ environments {
             driverClassName = "com.mysql.jdbc.Driver"
         }
     }
+    production {
+        dataSource {
+            String host = System.getenv('OPENSHIFT_MYSQL_DB_HOST')
+            String port = System.getenv('OPENSHIFT_MYSQL_DB_PORT')
+            String dbName = System.getenv('OPENSHIFT_APP_NAME')
+            url = "jdbc:mysql://$host:$port/$dbName"
+            username = System.getenv('OPENSHIFT_MYSQL_DB_USERNAME')
+            password = System.getenv('OPENSHIFT_MYSQL_DB_PASSWORD')
+            dbCreate = "create-drop"
+            dialect = "org.hibernate.dialect.MySQL5InnoDBDialect"
+            driverClassName = "com.mysql.jdbc.Driver"
+        }
+    }
     test {
         dataSource {
             dbCreate = "update"
