@@ -1,3 +1,5 @@
+source $SDKMAN_DIR/bin/sdkman-init.sh
+
 URUBOO_PATH=/Users/hector/projects/uruboo
 TOMCAT_PATH=/Users/hector/projects/tomcat
 
