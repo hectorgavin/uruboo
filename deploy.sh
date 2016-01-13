@@ -1,5 +1,3 @@
-#!/bin/bash
-
 URUBOO_PATH=/Users/hector/projects/uruboo
 TOMCAT_PATH=/Users/hector/projects/tomcat
 
