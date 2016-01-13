@@ -12,6 +12,9 @@ class Comment {
     static constraints = {
         sender nullable: false
         receiver nullable: false
-        message nullable: false, type: 'text', widget: 'textarea'
+        message nullable: false, type: 'text'
+    }
+    static mapping = {
+        message type: 'text'
     }
 }

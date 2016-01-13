@@ -12,7 +12,7 @@ class UrlMappings {
         }
         "/api/tasks"(resources: 'taskApi') {
             "/comments"(resources: 'commentApi')
-            "/updates"(resources: 'taskUpdateApi')
+            "/updates"(resources: 'taskUpdateLogApi', includes: ['index', 'show'])
         }
     }
 }

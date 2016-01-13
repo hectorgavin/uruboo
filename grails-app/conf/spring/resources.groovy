@@ -4,7 +4,9 @@ import grails.rest.render.json.JsonRenderer
 import grails.rest.render.json.JsonCollectionRenderer
 
 beans = {
-    for (domainClass in grailsApplication.domainClasses) {
+    List excludes = ['TaskUpdateLog', 'TaskFieldUpdateLog', 'TaskStateUpdateLog']
+
+    for (domainClass in grailsApplication.domainClasses.findAll { !excludes.contains(it.shortName) }) {
         "${domainClass.shortName}JSONRenderer"(JsonRenderer, domainClass.clazz) {
             excludes = ['class']
         }

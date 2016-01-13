@@ -11,4 +11,8 @@ class TaskFieldUpdateLog extends TaskUpdateLog {
         oldValue nullable: true
         newValue nullable: true
     }
+    static mapping = {
+        oldValue type: 'text'
+        newValue type: 'text'
+    }
 }

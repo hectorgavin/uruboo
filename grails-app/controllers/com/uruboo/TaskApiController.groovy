@@ -8,6 +8,11 @@ class TaskApiController extends AbstractApiController {
         super(Task)
     }
 
+    def save() {
+        jsonRequest.customer = params.customerApiId
+        super.save()
+    }
+
     def update() {
         Task originalTask = (Task) queryForResource(params.id)
 
