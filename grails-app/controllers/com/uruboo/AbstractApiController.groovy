@@ -9,6 +9,8 @@ abstract class AbstractApiController<T> extends RestfulController<T> {
 
     static responseFormats = ['json']
     static beforeInterceptor = {
+        // Note: request.JSON stream is closed once it is read once,
+        // that is why we need this property
         jsonRequest << request.JSON
     }
 

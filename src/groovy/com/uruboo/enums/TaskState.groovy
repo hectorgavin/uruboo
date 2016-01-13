@@ -6,6 +6,9 @@ enum TaskState {
     DONE
 
     public static TaskState findByName(String name) {
+        if (!name) {
+            return null
+        }
         return values().find { it.name().toLowerCase() == name.toLowerCase() }
     }
 }

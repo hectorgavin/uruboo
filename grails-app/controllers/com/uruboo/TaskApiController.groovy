@@ -10,8 +10,14 @@ class TaskApiController extends AbstractApiController {
 
     def update() {
         Task originalTask = (Task) queryForResource(params.id)
+
+        // Create a TaskFieldUpdate for each modified field
         if (jsonRequest) {
-            jsonRequest.findAll { originalTask.hasProperty(it.key) && it.key != 'state' }?.each {
+            jsonRequest.findAll {
+                originalTask.hasProperty(it.key) &&
+                it.key != 'state' &&
+                it.value != originalTask[it.key] }?.each {
+
                 TaskFieldUpdateLog update = new TaskFieldUpdateLog(
                         field: it.key,
                         oldValue: originalTask[it.key],
@@ -20,10 +26,11 @@ class TaskApiController extends AbstractApiController {
                 )
                 update.save()
             }
-            if (jsonRequest.state && TaskState.findByName(jsonRequest.state)) {
+            TaskState newState = TaskState.findByName(jsonRequest.state)
+            if (newState && originalTask.state != newState) {
                 TaskStateUpdateLog update = new TaskStateUpdateLog(
                         oldState: originalTask.state,
-                        newState: TaskState.findByName(jsonRequest.state),
+                        newState: newState,
                         task: originalTask
                 )
                 update.save()
