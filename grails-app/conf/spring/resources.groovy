@@ -1,7 +1,6 @@
 // Place your Spring DSL code here
 
 import com.uruboo.marshallers.CustomObjectMarshaller
-import com.uruboo.marshallers.DateMarshaller
 import com.uruboo.marshallers.UserMarshaller
 import com.uruboo.marshallers.TaskMarshaller
 import com.uruboo.marshallers.CommentMarshaller
