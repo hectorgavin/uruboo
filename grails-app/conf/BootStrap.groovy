@@ -1,4 +1,5 @@
 import org.springframework.web.context.support.WebApplicationContextUtils
+import grails.util.Environment
 
 class BootStrap {
 
@@ -19,7 +20,14 @@ class BootStrap {
                 return result
             }
         }
+
+        Environment.executeForCurrentEnvironment {
+            development {
+                "compass watch grails-app/assets/".execute()
+            }
+        }
     }
+
     def destroy = {
     }
 }
