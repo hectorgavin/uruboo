@@ -13,6 +13,10 @@ class User {
         email nullable: false, blank: false
         firstName nullable: false, blank: false
         lastName nullable: true
-        notes nullable: true, widget: 'textarea'
+        notes nullable: true
+    }
+
+    static mapping = {
+        notes type: 'text'
     }
 }

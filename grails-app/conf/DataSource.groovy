@@ -28,7 +28,7 @@ environments {
             url = "jdbc:mysql://localhost:3306/uruboo?characterEncoding=UTF-8&rewriteBatchedStatements=true"
             username = "root"
             password = "root"
-            dbCreate = "update"
+            dbCreate = "create-drop"
             dialect = "org.hibernate.dialect.MySQL5InnoDBDialect"
             driverClassName = "com.mysql.jdbc.Driver"
         }

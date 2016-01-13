@@ -22,6 +22,9 @@ class Task {
         finished nullable: true
         customer nullable: false
     }
+    static mapping = {
+        description type: 'text'
+    }
 
     String toString() {
         return title
