@@ -1,0 +1,36 @@
+@mixin desktop {
+    @media (min-width: $desktopWidth) {
+        @content;
+    }
+
+}
+
+@mixin mobile {
+    @media (max-width: $mobileWidth) {
+        @content;
+    }
+}
+
+@mixin display-flex-all() {
+    @include flexbox((display: flex), 1);
+    @include flexbox((display: flex), 2);
+    @include flexbox((display: flex), 3);
+}
+
+@mixin flex-wrap-all() {
+    @include flexbox((flex-wrap: wrap), 1);
+    @include flexbox((flex-wrap: wrap), 2);
+    @include flexbox((flex-wrap: wrap), 3);
+}
+
+@mixin align-items-all($value) {
+    @include flexbox((align-items: $value), 1);
+    @include flexbox((align-items: $value), 2);
+    @include flexbox((align-items: $value), 3);
+}
+
+@mixin justify-content-all($value) {
+    @include flexbox((justify-content: $value), 1);
+    @include flexbox((justify-content: $value), 2);
+    @include flexbox((justify-content: $value), 3);
+}

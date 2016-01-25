@@ -1,3 +1,4 @@
+import grails.util.Environment
 import org.springframework.web.context.support.WebApplicationContextUtils
 
 class BootStrap {
@@ -17,6 +18,13 @@ class BootStrap {
                     result[it] = delegate[it]
                 }
                 return result
+            }
+        }
+
+        // Auto-compile SCSS on dev
+        Environment.executeForCurrentEnvironment {
+            development {
+                "compass watch grails-app/assets".execute()
             }
         }
     }

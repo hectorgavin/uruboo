@@ -1,0 +1,23 @@
+#main-wrapper {
+    height: 500px;
+    aside, main {
+        height: 100%;
+    }
+    aside {
+        background-color: #303c40;
+
+    }
+    main {
+        background-color: #f4f5f6;
+    }
+    @include desktop {
+        aside {
+            float: left;
+            width: 320px;
+        }
+        main {
+            margin-left: 320px;
+            width: 100%;
+        }
+    }
+}

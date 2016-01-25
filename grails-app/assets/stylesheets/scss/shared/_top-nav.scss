@@ -1,0 +1,25 @@
+#top-nav {
+    @include display-flex-all;
+    @include align-items-all(center);
+    @include justify-content-all(space-between);
+    height: 80px;
+    padding: 0 25px;
+    background-color: #68848f;
+    color: white;
+    #logo-wrapper {
+        font-family: 'Megrim', cursive;
+        font-size: 42px;
+    }
+    #alerts {
+        i {
+            font-size: 26px;
+            margin-right: 25px;
+            cursor: pointer;
+        }
+        a {
+            background-color: #fb8c00;
+            font-size: 18px;
+            padding: 5px 20px;
+        }
+    }
+}

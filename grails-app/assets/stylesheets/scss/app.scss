@@ -1,0 +1,30 @@
+@import "compass/css3";
+@import "compass/support";
+@import "compass/reset";
+$graceful-usage-threshold: 0.333;
+$critical-usage-threshold: 0.666;
+$debug-browser-support: true;
+$browser-minimum-versions: ("chrome": null, "firefox": "4", "ie": "7", "safari": "6", "opera": "16");
+@import 'font-awesome/font-awesome';
+@import 'variables';
+@import 'mixins';
+
+@import 'shared/grid';
+@import 'shared/top-nav';
+
+@import 'shared/sidebar';
+
+a.no-style {
+    &:link, &:visited {
+        color: white;
+        text-decoration: none;
+    }
+
+    &:link:active, &:visited:active {
+        color: white;
+    }
+}
+
+.hidden {
+    display: none !important;
+}
