@@ -8,54 +8,53 @@
         </li>
     </ul>
     <ul id="my-clients" class="sidebar-block">
-        <li class="level-1">
+        <li>
             <div class="item">Antonio Loureda</div>
-            <ul class="level-2">
+            <ul class="sub-level">
                 <li>
-                    <div class="item">Enviar correo</div>
-                    <div class="item">Crear tarea</div>
-                    <div class="item">Generar compra</div>
+                    <div class="sub-item">Enviar correo</div>
+                    <div class="sub-item">Crear tarea</div>
+                    <div class="sub-item">Generar compra</div>
                     <div class="separator"></div>
-                    <div class="item">Perfil cliente</div>
-                    <div class="item">Tareas activas</div>
-                    <div class="item">Tareas finalizadas</div>
-                    <div class="item">Ver compras</div>
-                    <div class="item">Historico de chat</div>
+                    <div class="sub-item">Perfil cliente</div>
+                    <div class="sub-item">Tareas activas</div>
+                    <div class="sub-item">Tareas finalizadas</div>
+                    <div class="sub-item">Ver compras</div>
+                    <div class="sub-item">Historico de chat</div>
                 </li>
             </ul>
         </li>
-        <li class="level-1">
+        <li>
             <div class="item">Antonio Loureda</div>
-            <ul class="level-2 hidden">
+            <ul class="sub-level">
                 <li>
-                    <div class="item">Enviar correo</div>
-                    <div class="item">Crear tarea</div>
-                    <div class="item">Generar compra</div>
+                    <div class="sub-item">Enviar correo</div>
+                    <div class="sub-item">Crear tarea</div>
+                    <div class="sub-item">Generar compra</div>
                     <div class="separator"></div>
-                    <div class="item">Perfil cliente</div>
-                    <div class="item">Tareas activas</div>
-                    <div class="item">Tareas finalizadas</div>
-                    <div class="item">Ver compras</div>
-                    <div class="item">Historico de chat</div>
+                    <div class="sub-item">Perfil cliente</div>
+                    <div class="sub-item">Tareas activas</div>
+                    <div class="sub-item">Tareas finalizadas</div>
+                    <div class="sub-item">Ver compras</div>
+                    <div class="sub-item">Historico de chat</div>
                 </li>
             </ul>
         </li>
-        <li class="level-1">
+        <li>
             <div class="item">Antonio Loureda</div>
-            <ul class="level-2 hidden">
+            <ul class="sub-level">
                 <li>
-                    <div class="item">Enviar correo</div>
-                    <div class="item">Crear tarea</div>
-                    <div class="item">Generar compra</div>
+                    <div class="sub-item">Enviar correo</div>
+                    <div class="sub-item">Crear tarea</div>
+                    <div class="sub-item">Generar compra</div>
                     <div class="separator"></div>
-                    <div class="item">Perfil cliente</div>
-                    <div class="item">Tareas activas</div>
-                    <div class="item">Tareas finalizadas</div>
-                    <div class="item">Ver compras</div>
-                    <div class="item">Historico de chat</div>
+                    <div class="sub-item">Perfil cliente</div>
+                    <div class="sub-item">Tareas activas</div>
+                    <div class="sub-item">Tareas finalizadas</div>
+                    <div class="sub-item">Ver compras</div>
+                    <div class="sub-item">Historico de chat</div>
                 </li>
             </ul>
         </li>
-
     </ul>
 </aside>

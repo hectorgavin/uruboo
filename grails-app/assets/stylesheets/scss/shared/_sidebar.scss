@@ -2,6 +2,33 @@
     .sidebar-block {
         color: white;
         background-color: #303c40;
-        padding: 20px;
+        margin: 20px 30px 0;
+    }
+    ul.sidebar-block {
+        .item, .sub-item {
+            cursor: pointer;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+        .separator {
+            border-bottom: 1px solid white;
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+        & > li {
+            &:not(.selected) {
+                ul.sub-level {
+                    //display: none;
+                }
+            }
+        }
+        ul.sub-level {
+            display: none;
+            padding-left: 30px;
+            padding-right: 30px;
+            margin-left: -30px;
+            margin-right: -30px;
+            background-color: #68848f;
+        }
     }
 }

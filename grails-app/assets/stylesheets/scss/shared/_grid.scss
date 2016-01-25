@@ -1,5 +1,4 @@
 #main-wrapper {
-    height: 500px;
     aside, main {
         height: 100%;
     }
@@ -13,10 +12,10 @@
     @include desktop {
         aside {
             float: left;
-            width: 320px;
+            width: $sidebarWidth;
         }
         main {
-            margin-left: 320px;
+            margin-left: $sidebarWidth;
             width: 100%;
         }
     }

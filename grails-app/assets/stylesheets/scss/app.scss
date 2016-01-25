@@ -9,9 +9,9 @@ $browser-minimum-versions: ("chrome": null, "firefox": "4", "ie": "7", "safari":
 @import 'variables';
 @import 'mixins';
 
+// Layout
 @import 'shared/grid';
 @import 'shared/top-nav';
-
 @import 'shared/sidebar';
 
 a.no-style {
