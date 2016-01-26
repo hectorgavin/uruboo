@@ -1,12 +1,12 @@
 //=require jquery
 
 $(document).ready(function() {
-    $('ul.sidebar-block .item').click(function() {
+    $('.sidebar-block .item').click(function() {
         var $this = $(this);
-        var $prevSelected = $this.parents('ul').find('li.selected').removeClass('selected');
-        $prevSelected.find('ul').slideUp();
-        if (!$prevSelected.find('.item').is($this)) {
-            $(this).parents('li').addClass('selected').find('ul').slideDown();
+        var $prevSelected = $this.parents('.sidebar-block').find('.item.selected').removeClass('selected');
+        $prevSelected.find('+.sub-level').slideUp();
+        if (!$prevSelected.is($this)) {
+            $this.addClass('selected').find('+.sub-level').slideDown();
         }
     });
 });

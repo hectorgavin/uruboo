@@ -2,28 +2,23 @@
     .sidebar-block {
         color: white;
         background-color: #303c40;
-        padding: 20px 30px 0;
-    }
-    ul.sidebar-block {
+        padding-left: 30px;
+        padding-right: 30px;
+        &:not(:last-child) {
+            margin-bottom: 1px;
+        }
         .item, .sub-item {
+            padding: 15px 0;
             cursor: pointer;
-            padding-top: 15px;
-            padding-bottom: 15px;
+            & + .sub-level {
+                display: none;
+            }
         }
         .separator {
             border-bottom: 1px solid white;
-            margin-top: 15px;
-            margin-bottom: 15px;
+            margin: 15px 0;
         }
-        & > li {
-            &:not(.selected) {
-                ul.sub-level {
-                    //display: none;
-                }
-            }
-        }
-        ul.sub-level {
-            display: none;
+        .sub-level {
             padding-left: 30px;
             padding-right: 30px;
             margin-left: -30px;
