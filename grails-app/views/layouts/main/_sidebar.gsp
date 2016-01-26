@@ -1,60 +1,54 @@
 <aside id="sidebar">
-    <div id="my-overview" class="sidebar-block">
-        <div class="item">Hello Hector Gavin</div>
-    </div>
-    <div id="my-tools" class="sidebar-block">
-        <div class="item">Inicio</div>
-        <div class="item">Bandeja de entrada</div>
-        <div class="item">Calendario</div>
-    </div>
-    <div id="my-clients" class="sidebar-block">
-        <div class="item">Antonio Loureda</div>
-        <div class="sub-level">
-            <div class="sub-item">Enviar correo</div>
-            <div class="sub-item">Crear tarea</div>
-            <div class="sub-item">Generar compra</div>
-            <div class="separator"></div>
-            <div class="sub-item">Perfil cliente</div>
-            <div class="sub-item">Tareas activas</div>
-            <div class="sub-item">Tareas finalizadas</div>
-            <div class="sub-item">Ver compras</div>
-            <div class="sub-item">Historico de chat</div>
-        </div>
-        <div class="item">Antonio Loureda</div>
-        <div class="sub-level">
-            <div class="sub-item">Enviar correo</div>
-            <div class="sub-item">Crear tarea</div>
-            <div class="sub-item">Generar compra</div>
-            <div class="separator"></div>
-            <div class="sub-item">Perfil cliente</div>
-            <div class="sub-item">Tareas activas</div>
-            <div class="sub-item">Tareas finalizadas</div>
-            <div class="sub-item">Ver compras</div>
-            <div class="sub-item">Historico de chat</div>
-        </div>
-        <div class="item">Antonio Loureda</div>
-        <div class="sub-level">
-            <div class="sub-item">Enviar correo</div>
-            <div class="sub-item">Crear tarea</div>
-            <div class="sub-item">Generar compra</div>
-            <div class="separator"></div>
-            <div class="sub-item">Perfil cliente</div>
-            <div class="sub-item">Tareas activas</div>
-            <div class="sub-item">Tareas finalizadas</div>
-            <div class="sub-item">Ver compras</div>
-            <div class="sub-item">Historico de chat</div>
-        </div>
-        <div class="item">Antonio Loureda</div>
-        <div class="sub-level">
-            <div class="sub-item">Enviar correo</div>
-            <div class="sub-item">Crear tarea</div>
-            <div class="sub-item">Generar compra</div>
-            <div class="separator"></div>
-            <div class="sub-item">Perfil cliente</div>
-            <div class="sub-item">Tareas activas</div>
-            <div class="sub-item">Tareas finalizadas</div>
-            <div class="sub-item">Ver compras</div>
-            <div class="sub-item">Historico de chat</div>
-        </div>
-    </div>
+    <ul id="my-overview" class="sidebar-block">
+        <li class="item">Hello Hector Gavin</li>
+    </ul>
+    <ul id="my-tools" class="sidebar-block">
+        <li class="item">Inicio</li>
+        <li class="item">Bandeja de entrada</li>
+        <li class="item">Calendario</li>
+    </ul>
+    <ul id="my-clients" class="sidebar-block">
+        <li>
+            <span class="item">Antonio Loureda</span>
+            <ul>
+                <li class="item">Enviar correo</li>
+                <li class="item">Crear tarea</li>
+                <li class="item">Generar compra</li>
+                <li class="separator"></li>
+                <li class="item">Perfil cliente</li>
+                <li class="item">Tareas activas</li>
+                <li class="item">Tareas finalizadas</li>
+                <li class="item">Ver compras</li>
+                <li class="item">Historico de chat</li>
+            </ul>
+        </li>
+        <li>
+            <span class="item">Antonio Loureda</span>
+            <ul>
+                <li class="item">Enviar correo</li>
+                <li class="item">Crear tarea</li>
+                <li class="item">Generar compra</li>
+                <li class="separator"></li>
+                <li class="item">Perfil cliente</li>
+                <li class="item">Tareas activas</li>
+                <li class="item">Tareas finalizadas</li>
+                <li class="item">Ver compras</li>
+                <li class="item">Historico de chat</li>
+            </ul>
+        </li>
+        <li>
+            <span class="item">Antonio Loureda</span>
+            <ul>
+                <li class="item">Enviar correo</li>
+                <li class="item">Crear tarea</li>
+                <li class="item">Generar compra</li>
+                <li class="separator"></li>
+                <li class="item">Perfil cliente</li>
+                <li class="item">Tareas activas</li>
+                <li class="item">Tareas finalizadas</li>
+                <li class="item">Ver compras</li>
+                <li class="item">Historico de chat</li>
+            </ul>
+        </li>
+    </ul>
 </aside>

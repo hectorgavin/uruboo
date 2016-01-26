@@ -1,29 +1,28 @@
 #sidebar {
     .sidebar-block {
-        color: white;
-        background-color: #303c40;
-        padding-left: 30px;
-        padding-right: 30px;
+        color: #90a4ae;
+        background-color: $secondaryColor;
         &:not(:last-child) {
-            margin-bottom: 1px;
+            margin-bottom: $sideblockGutter;
         }
-        .item, .sub-item {
-            padding: 15px 0;
+        .item {
+            display: block;
+            padding: $sideblockItemPadding $sideblockPadding;
             cursor: pointer;
-            & + .sub-level {
-                display: none;
+            &:hover {
+                background-color: $primaryColor;
+                color: #cfd8dc;
             }
         }
         .separator {
-            border-bottom: 1px solid white;
-            margin: 15px 0;
+            border-bottom: 1px solid #90a4ae;
+            margin: $sideblockItemPadding $sideblockPadding;
         }
-        .sub-level {
-            padding-left: 30px;
-            padding-right: 30px;
-            margin-left: -30px;
-            margin-right: -30px;
-            background-color: #68848f;
+        li ul {
+            display: none;
+            padding-left: $sideblockPadding;
+            margin-left: -$sideblockPadding;
+            background-color: #2c3a41;
         }
     }
 }
