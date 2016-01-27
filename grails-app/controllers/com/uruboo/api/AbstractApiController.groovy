@@ -1,4 +1,4 @@
-package com.uruboo
+package com.uruboo.api
 
 import grails.rest.RestfulController
 import org.springframework.http.HttpStatus

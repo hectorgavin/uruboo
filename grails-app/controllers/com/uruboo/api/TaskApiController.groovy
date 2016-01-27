@@ -1,5 +1,8 @@
-package com.uruboo
+package com.uruboo.api
 
+import com.uruboo.Task
+import com.uruboo.TaskFieldUpdateLog
+import com.uruboo.TaskStateUpdateLog
 import com.uruboo.enums.TaskState
 
 class TaskApiController extends AbstractApiController {
@@ -10,7 +13,7 @@ class TaskApiController extends AbstractApiController {
 
     def save() {
         jsonRequest.customer = params.customerApiId
-        super.save()
+        Object.save()
     }
 
     def update() {
@@ -41,6 +44,6 @@ class TaskApiController extends AbstractApiController {
                 update.save()
             }
         }
-        super.update()
+        Object.update()
     }
 }

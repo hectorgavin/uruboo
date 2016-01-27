@@ -1,4 +1,6 @@
-package com.uruboo
+package com.uruboo.api
+
+import com.uruboo.Comment
 
 class CommentApiController extends AbstractApiController {
 
@@ -11,11 +13,11 @@ class CommentApiController extends AbstractApiController {
             params.sort = 'dateCreated'
             params.order = 'asc'
         }
-        super.index()
+        Object.index()
     }
 
     def save() {
         jsonRequest.task = params.taskApiId
-        super.save()
+        Object.save()
     }
 }

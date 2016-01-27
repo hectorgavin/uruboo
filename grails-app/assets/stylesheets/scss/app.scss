@@ -14,6 +14,10 @@ $browser-minimum-versions: ("chrome": null, "firefox": "4", "ie": "7", "safari":
 @import 'shared/top-nav';
 @import 'shared/sidebar';
 
+// Home
+@import 'home/activeTasks/task';
+@import 'home/activeTasks';
+
 body {
     font-family: 'Open Sans', 'Droid Sans', Tahoma, Arial, sans-serif;
 }

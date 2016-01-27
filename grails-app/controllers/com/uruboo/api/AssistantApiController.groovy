@@ -1,4 +1,6 @@
-package com.uruboo
+package com.uruboo.api
+
+import com.uruboo.Assistant
 
 import static org.springframework.http.HttpStatus.PRECONDITION_FAILED
 
@@ -14,6 +16,6 @@ class AssistantApiController extends AbstractApiController {
             fail('The assistant has customers assigned', PRECONDITION_FAILED)
             return
         }
-        super.delete()
+        Object.delete()
     }
 }

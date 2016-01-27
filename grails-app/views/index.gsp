@@ -5,8 +5,8 @@
 		<title>Uruboo - Home</title>
 	</head>
 	<body>
-		<main>
-			<h1>Hello World</h1>
+		<main id="home">
+			<tmpl:/home/activeTasks/>
 		</main>
 	</body>
 </html>

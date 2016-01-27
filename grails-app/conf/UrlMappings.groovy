@@ -1,6 +1,6 @@
 class UrlMappings {
 
 	static mappings = {
-        "/"(view:"/index")
+        "/"(controller: 'home', action: 'index')
     }
 }

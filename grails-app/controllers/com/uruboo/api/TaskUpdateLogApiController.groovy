@@ -1,4 +1,6 @@
-package com.uruboo
+package com.uruboo.api
+
+import com.uruboo.TaskUpdateLog
 
 class TaskUpdateLogApiController extends AbstractApiController {
 
@@ -11,6 +13,6 @@ class TaskUpdateLogApiController extends AbstractApiController {
             params.sort = 'dateCreated'
             params.order = 'desc'
         }
-        super.index()
+        Object.index()
     }
 }

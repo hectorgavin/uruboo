@@ -1,0 +1,16 @@
+#home section#active-tasks {
+    header {
+        padding: 15px;
+        height: 72px;
+        line-height: 72px;
+        background-color: #006e8c;
+        color: white;
+        font-size: 24px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    .tasks {
+        @include display-flex-all;
+        @include flex-wrap-all;
+    }
+}

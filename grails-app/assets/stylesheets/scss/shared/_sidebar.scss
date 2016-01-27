@@ -2,27 +2,29 @@
     .sidebar-block {
         color: #90a4ae;
         background-color: $secondaryColor;
+        padding-top: $sideblockVerticalPadding;
+        padding-bottom: $sideblockVerticalPadding;
         &:not(:last-child) {
             margin-bottom: $sideblockGutter;
         }
         .item {
             display: block;
-            padding: $sideblockItemPadding $sideblockPadding;
+            padding: $sideblockItemPadding $sideblockHorizontalPadding;
             cursor: pointer;
-            &:hover {
-                background-color: $primaryColor;
-                color: #cfd8dc;
-            }
         }
-        .separator {
-            border-bottom: 1px solid #90a4ae;
-            margin: $sideblockItemPadding $sideblockPadding;
+        .item:hover, li:hover > .item {
+            background-color: $primaryColor;
+            color: #cfd8dc;
         }
         li ul {
             display: none;
-            padding-left: $sideblockPadding;
-            margin-left: -$sideblockPadding;
+            padding-left: $sideblockHorizontalPadding;
+            margin-left: -$sideblockHorizontalPadding;
             background-color: #2c3a41;
+        }
+        .separator {
+            border-bottom: 1px solid #90a4ae;
+            margin: $sideblockItemPadding $sideblockHorizontalPadding;
         }
     }
 }
