@@ -2,7 +2,7 @@
     @include display-flex-all;
     @include align-items-all(center);
     @include justify-content-all(space-between);
-    height: 80px;
+    height: $topNavHeight;
     padding: 0 25px;
     background-color: #68848f;
     color: white;

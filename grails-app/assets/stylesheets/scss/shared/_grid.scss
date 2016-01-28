@@ -3,12 +3,10 @@
         background-color: #f4f5f6;
     }
     @include desktop {
+        height: calc(100vh - #{$topNavHeight});
+        @include display-flex-all;
         aside {
-            float: left;
-            width: $sidebarWidth;
-        }
-        main {
-            margin-left: $sidebarWidth;
+            min-width: $sidebarWidth;
         }
     }
 }

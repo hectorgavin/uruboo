@@ -11,8 +11,9 @@ $browser-minimum-versions: ("chrome": null, "firefox": "4", "ie": "7", "safari":
 
 // Layout
 @import 'shared/grid';
-@import 'shared/top-nav';
+@import 'shared/topNav';
 @import 'shared/sidebar';
+@import 'shared/chat';
 
 // Home
 @import 'home/activeTasks/task';

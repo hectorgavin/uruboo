@@ -22,7 +22,8 @@
         <div id="main-wrapper">
             <tmpl:/layouts/main/sidebar/>
             <g:layoutBody/>
-        </div>
+			<tmpl:/layouts/main/chat/>
+	</div>
 		<asset:javascript src="app.js"/>
 	</body>
 </html>

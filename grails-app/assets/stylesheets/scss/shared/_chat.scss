@@ -1,0 +1,14 @@
+#chat {
+    section:not(:last-child) {
+        margin: 20px 0 50px;
+    }
+    header {
+        display: block;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+    ul li {
+        padding: 20px 40px;
+    }
+}
