@@ -1,6 +1,7 @@
 <aside id="sidebar">
+    <span class="toggle"><<</span>
     <ul id="my-overview" class="sidebar-block">
-        <li class="item">Hello Hector Gavin</li>
+        <li class="item">Hola ${currentAssistant?.firstName}</li>
     </ul>
     <ul id="my-tools" class="sidebar-block">
         <li class="item">Inicio</li>
@@ -8,47 +9,8 @@
         <li class="item">Calendario</li>
     </ul>
     <ul id="my-clients" class="sidebar-block">
-        <li>
-            <span class="item">Antonio Loureda</span>
-            <ul>
-                <li class="item">Enviar correo</li>
-                <li class="item">Crear tarea</li>
-                <li class="item">Generar compra</li>
-                <li class="separator"></li>
-                <li class="item">Perfil cliente</li>
-                <li class="item">Tareas activas</li>
-                <li class="item">Tareas finalizadas</li>
-                <li class="item">Ver compras</li>
-                <li class="item">Historico de chat</li>
-            </ul>
-        </li>
-        <li>
-            <span class="item">Antonio Loureda</span>
-            <ul>
-                <li class="item">Enviar correo</li>
-                <li class="item">Crear tarea</li>
-                <li class="item">Generar compra</li>
-                <li class="separator"></li>
-                <li class="item">Perfil cliente</li>
-                <li class="item">Tareas activas</li>
-                <li class="item">Tareas finalizadas</li>
-                <li class="item">Ver compras</li>
-                <li class="item">Historico de chat</li>
-            </ul>
-        </li>
-        <li>
-            <span class="item">Antonio Loureda</span>
-            <ul>
-                <li class="item">Enviar correo</li>
-                <li class="item">Crear tarea</li>
-                <li class="item">Generar compra</li>
-                <li class="separator"></li>
-                <li class="item">Perfil cliente</li>
-                <li class="item">Tareas activas</li>
-                <li class="item">Tareas finalizadas</li>
-                <li class="item">Ver compras</li>
-                <li class="item">Historico de chat</li>
-            </ul>
-        </li>
+        <g:each in="${currentAssistant?.customers}" var="customer">
+            <li><tmpl:/layouts/main/sidebar/client customer="${customer}"/></li>
+        </g:each>
     </ul>
 </aside>

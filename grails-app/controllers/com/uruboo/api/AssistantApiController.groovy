@@ -16,6 +16,6 @@ class AssistantApiController extends AbstractApiController {
             fail('The assistant has customers assigned', PRECONDITION_FAILED)
             return
         }
-        Object.delete()
+        super.delete()
     }
 }

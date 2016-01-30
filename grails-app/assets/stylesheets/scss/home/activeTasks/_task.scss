@@ -1,4 +1,5 @@
 #home section#active-tasks .task {
+    position: relative;
     min-height: 165px;
     border: 2px solid #388e3c;
     margin: 10px;
@@ -10,5 +11,18 @@
     }
     .description {
         font-size: 16px;
+    }
+    .customer, .comments {
+        position: absolute;
+        bottom: 15px;
+        color: white;
+        padding: 5px;
+    }
+    .customer {
+        background-color: purple;
+    }
+    .comments {
+        background-color: black;
+        right: 15px;
     }
 }

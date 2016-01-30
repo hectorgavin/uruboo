@@ -1,5 +1,14 @@
 #sidebar {
     background-color: $secondaryColor;
+    @include box-shadow(2px 5px 15px 0 #555);
+    border-right: 1px solid #2B373E;
+    .toggle {
+        right: 15px;
+        color: white;
+    }
+    &.collapsed .toggle:after {
+        content: 'MENU';
+    }
     .sidebar-block {
         color: #90a4ae;
         background-color: $secondaryColor;
@@ -7,6 +16,10 @@
         padding-bottom: $sideblockVerticalPadding;
         &:not(:last-child) {
             margin-bottom: $sideblockGutter;
+        }
+        &#my-overview .item:hover {
+            color: #90a4ae;
+            background-color: $secondaryColor;
         }
         .item {
             display: block;

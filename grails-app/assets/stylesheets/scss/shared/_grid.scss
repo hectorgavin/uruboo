@@ -1,12 +1,36 @@
 #main-wrapper {
     main {
+        width: 100%;
         background-color: #f4f5f6;
     }
     @include desktop {
         height: calc(100vh - #{$topNavHeight});
         @include display-flex-all;
+        main {
+            padding: 15px;
+        }
         aside {
+            position: relative;
             min-width: $sidebarWidth;
+            .toggle {
+                position: absolute;
+                top: 15px;
+                cursor: pointer;
+            }
+            &.collapsed {
+                min-width: 50px;
+                .toggle:after {
+                    transform-origin: left top 0;
+                    float: left;
+                    position: absolute;
+                    transform: rotate(90deg);
+                    top: 50px;
+                    font-weight: 700;
+                }
+                *:not(.toggle) {
+                    display: none;
+                }
+            }
         }
     }
 }

@@ -28,7 +28,7 @@ environments {
             url = "jdbc:mysql://localhost:3306/uruboo?characterEncoding=UTF-8&rewriteBatchedStatements=true"
             username = "root"
             password = "root"
-            dbCreate = "create-drop"
+            dbCreate = "none"
             dialect = "org.hibernate.dialect.MySQL5InnoDBDialect"
             driverClassName = "com.mysql.jdbc.Driver"
         }
@@ -41,7 +41,7 @@ environments {
             url = "jdbc:mysql://$host:$port/$dbName"
             username = System.getenv('OPENSHIFT_MYSQL_DB_USERNAME')
             password = System.getenv('OPENSHIFT_MYSQL_DB_PASSWORD')
-            dbCreate = "create-drop"
+            dbCreate = "none"
             dialect = "org.hibernate.dialect.MySQL5InnoDBDialect"
             driverClassName = "com.mysql.jdbc.Driver"
         }

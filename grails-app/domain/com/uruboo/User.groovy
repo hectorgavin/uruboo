@@ -9,6 +9,8 @@ class User {
     Date dateCreated
     Date lastUpdated
 
+    static transients = ['fullName']
+
     static constraints = {
         email nullable: false, blank: false
         firstName nullable: false, blank: false
@@ -18,5 +20,9 @@ class User {
 
     static mapping = {
         notes type: 'text'
+    }
+
+    public String getFullName() {
+        return firstName + ' ' + lastName
     }
 }

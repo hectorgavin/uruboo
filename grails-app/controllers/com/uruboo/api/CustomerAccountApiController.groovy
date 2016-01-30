@@ -10,6 +10,6 @@ class CustomerAccountApiController extends AbstractApiController {
 
     def save() {
         jsonRequest.customer = params.customerApiId
-        Object.save()
+        super.save()
     }
 }

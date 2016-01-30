@@ -13,6 +13,6 @@ class TaskUpdateLogApiController extends AbstractApiController {
             params.sort = 'dateCreated'
             params.order = 'desc'
         }
-        Object.index()
+        super.index()
     }
 }

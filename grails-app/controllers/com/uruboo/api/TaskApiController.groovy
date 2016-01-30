@@ -13,7 +13,7 @@ class TaskApiController extends AbstractApiController {
 
     def save() {
         jsonRequest.customer = params.customerApiId
-        Object.save()
+        super.save()
     }
 
     def update() {
@@ -44,6 +44,6 @@ class TaskApiController extends AbstractApiController {
                 update.save()
             }
         }
-        Object.update()
+        super.update()
     }
 }

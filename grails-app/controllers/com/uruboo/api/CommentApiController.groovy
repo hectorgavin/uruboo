@@ -13,11 +13,11 @@ class CommentApiController extends AbstractApiController {
             params.sort = 'dateCreated'
             params.order = 'asc'
         }
-        Object.index()
+        super.index()
     }
 
     def save() {
         jsonRequest.task = params.taskApiId
-        Object.save()
+        super.save()
     }
 }

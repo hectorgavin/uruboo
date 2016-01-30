@@ -1,4 +1,5 @@
-<aside id="chat">
+<aside id="chat" class="collapsed">
+    <span class="toggle"><<</span>
     <section id="online">
         <header>Online</header>
         <ul>

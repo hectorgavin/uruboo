@@ -9,4 +9,10 @@ $(document).ready(function() {
             $this.parents('li').addClass('selected').find('ul').slideDown();
         }
     });
+    $('aside > .toggle').click(function() {
+        var $this = $(this);
+        var text = $this.text();
+        $this.text(text == '>>' ? '<<' : '>>');
+        $this.parents('aside').toggleClass('collapsed');
+    });
 });
